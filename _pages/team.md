@@ -1,7 +1,7 @@
 ---
-title: "Allan Lab - Team"
+title: "HAIR Lab - Team"
 layout: gridlay
-excerpt: "Allan Lab: Team members"
+excerpt: "HAIR Lab: Team members"
 sitemap: false
 permalink: /team/
 ---
@@ -15,7 +15,7 @@ Jump to [staff](#staff), [master and bachelor students](#master-and-bachelor-stu
 
 ## Staff
 {% assign number_printed = 0 %}
-{% for member in site.data.team_members %}
+{% for member in site.data.staff %}
 
 {% assign even_odd = number_printed | modulo: 2 %}
 
@@ -76,9 +76,7 @@ Jump to [staff](#staff), [master and bachelor students](#master-and-bachelor-stu
 {% endif %}
 
 
-
-
-## Master and Bachelor Students
+## Students
 {% assign number_printed = 0 %}
 {% for member in site.data.students %}
 
@@ -89,8 +87,9 @@ Jump to [staff](#staff), [master and bachelor students](#master-and-bachelor-stu
 {% endif %}
 
 <div class="col-sm-6 clearfix">
+  <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ member.photo }}" class="img-responsive" width="25%" style="float: left" />
   <h4>{{ member.name }}</h4>
-  <i>{{ member.info }} <!-- <br>email: <{{ member.email }}></i> -->
+  <i>{{ member.info }} <!--<br>email: <{{ member.email }}></i> -->
   <ul style="overflow: hidden">
 
   {% if member.number_educ == 1 %}
@@ -98,21 +97,29 @@ Jump to [staff](#staff), [master and bachelor students](#master-and-bachelor-stu
   {% endif %}
 
   {% if member.number_educ == 2 %}
-  <li> {{ member.education1 }} </li>
-  <li> {{ member.education2 }} </li>
+  <li> {{ member.education1 | markdownify}} </li>
+  <li> {{ member.education2 | markdownify}} </li>
   {% endif %}
 
   {% if member.number_educ == 3 %}
-  <li> {{ member.education1 }} </li>
-  <li> {{ member.education2 }} </li>
-  <li> {{ member.education3 }} </li>
+  <li> {{ member.education1 | markdownify}} </li>
+  <li> {{ member.education2 | markdownify}} </li>
+  <li> {{ member.education3 | markdownify}} </li>
   {% endif %}
 
   {% if member.number_educ == 4 %}
-  <li> {{ member.education1 }} </li>
-  <li> {{ member.education2 }} </li>
-  <li> {{ member.education3 }} </li>
-  <li> {{ member.education4 }} </li>
+  <li> {{ member.education1 | markdownify}} </li>
+  <li> {{ member.education2 | markdownify}} </li>
+  <li> {{ member.education3 | markdownify}} </li>
+  <li> {{ member.education4 | markdownify}} </li>
+  {% endif %}
+
+  {% if member.number_educ == 5 %}
+  <li> {{ member.education1 | markdownify}} </li>
+  <li> {{ member.education2 | markdownify}} </li>
+  <li> {{ member.education3 | markdownify}} </li>
+  <li> {{ member.education4 | markdownify}} </li>
+  <li> {{ member.education5 | markdownify}} </li>
   {% endif %}
 
   </ul>
@@ -135,7 +142,7 @@ Jump to [staff](#staff), [master and bachelor students](#master-and-bachelor-stu
 ## Alumni
 
 {% assign number_printed = 0 %}
-{% for member in site.data.alumni_members %}
+{% for member in site.data.alumni%}
 
 {% assign even_odd = number_printed | modulo: 2 %}
 
@@ -164,33 +171,3 @@ Jump to [staff](#staff), [master and bachelor students](#master-and-bachelor-stu
 {% if even_odd == 1 %}
 </div>
 {% endif %}
-
-## Former visitors, BSc/ MSc students
-<div class="row">
-
-<div class="col-sm-4 clearfix">
-<h4>Visitors</h4>
-{% for member in site.data.alumni_visitors %}
-{{ member.name }}
-{% endfor %}
-</div>
-
-<div class="col-sm-4 clearfix">
-<h4>Master students</h4>
-{% for member in site.data.alumni_msc %}
-{{ member.name }}
-{% endfor %}
-</div>
-
-<div class="col-sm-4 clearfix">
-<h4>Bachelor Students</h4>
-{% for member in site.data.alumni_bsc %}
-{{ member.name }}
-{% endfor %}
-</div>
-
-</div>
-
-
-## Administrative Support
-<a href="mailto:Rijsewijk@Physics.LeidenUniv.nl">Ellie van Rijsewijk</a> is helping us (and other groups) with administration.
