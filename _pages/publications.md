@@ -1,8 +1,8 @@
 ---
-title: "Allan Lab - Publications"
+title: Publications
 layout: gridlay
-excerpt: "Allan Lab -- Publications."
-sitemap: false
+excerpt: Human-centered AI and Robotics Lab
+sitemap: true
 permalink: /publications/
 ---
 
