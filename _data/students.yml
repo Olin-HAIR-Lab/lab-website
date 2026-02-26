@@ -1,18 +1,16 @@
-- name: Kenechukwu (Kene) Mbanisi
-  photo: bio-photo.jpg
-  info: Assistant Professor of Robotics
-  email: kmbanisi@olin.edu
-  number_educ: 3
-  education1: PhD Worcester Polytechnic Institute
-  education2: MSc Worcester Polytechnic Institute
-  education3: BSc Covenant University
-
-- name: Harvey Merton
-  photo: bio-photo.jpg
-  info: Graduate Student Mentor
-  email: hmer101@mit.edu
+- name: Dokyun Kim
+  photo: dokyun.jpg
+  info: 2022 - 2026
+  email: dkim4@olin.edu
   number_educ: 2
-  education1: PhD Massachusetts Institute of Technology
-  education2: MSc Massachusetts Institute of Technology
-  education3: BSc University of Auckland
+  education1: Team Lead
+  education2: BSc Robotics, Class of 2026
+
+- name: Dexter Friis-Hecht
+  photo: bio-photo.jpg
+  info: 2022 - 2026
+  email: dfrishecht@olin.edu
+  number_educ: 2
+  education1: Team Lead
+  education2: BSc ECE, Class of 2026
 

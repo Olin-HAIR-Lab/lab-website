@@ -1,18 +1,13 @@
-- name: Kenechukwu (Kene) Mbanisi
-  photo: bio-photo.jpg
-  info: Assistant Professor of Robotics
-  email: kmbanisi@olin.edu
-  number_educ: 3
-  education1: PhD Worcester Polytechnic Institute
-  education2: MSc Worcester Polytechnic Institute
-  education3: BSc Covenant University
+- name: Brooke Moss
+  photo: brooke.jpg
+  info: Class of 2025
+  email: bmoss@alumni.olin.edu
+  number_educ: 1
+  education1: BSc Robotics for Sustainability
 
-- name: Harvey Merton
+- name: Luke Witten
   photo: bio-photo.jpg
-  info: Graduate Student Mentor
-  email: hmer101@mit.edu
-  number_educ: 2
-  education1: PhD Massachusetts Institute of Technology
-  education2: MSc Massachusetts Institute of Technology
-  education3: BSc University of Auckland
-
+  info: Class of 2025
+  email: lwitten@alumni.olin.edu
+  number_educ: 1
+  education1: BSc Robotics
