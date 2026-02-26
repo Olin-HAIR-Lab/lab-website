@@ -1,7 +1,7 @@
 ---
 title: "Human-centered AI and Robotics Lab"
 layout: homelay
-excerpt: "Human-centered AI and Robotics Lab at Olin College of Engineering."
+excerpt: "Human-centered AI and Robotics Lab"
 sitemap: false
 permalink: /
 ---
