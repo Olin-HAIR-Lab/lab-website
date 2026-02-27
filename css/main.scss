@@ -91,3 +91,10 @@ firstp {
     margin-right: 30px;
 }
 
+/* Dropdown on hover for desktop */
+@media (min-width: 768px) {
+  .navbar-nav > li.dropdown:hover > .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+}
