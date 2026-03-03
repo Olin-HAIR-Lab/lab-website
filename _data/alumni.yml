@@ -1,13 +1,17 @@
 - name: Brooke Moss
   photo: brooke.jpg
   info: Class of 2025
-  email: bmoss@alumni.olin.edu
   number_educ: 1
   education1: BSc Robotics for Sustainability
 
 - name: Luke Witten
   photo: bio-photo.jpg
   info: Class of 2025
-  email: lwitten@alumni.olin.edu
+  number_educ: 1
+  education1: BSc Robotics
+
+- name: AJ Evans
+  photo: aj.jpg
+  info: Class of 2025
   number_educ: 1
   education1: BSc Robotics

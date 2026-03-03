@@ -1,16 +1,31 @@
 - name: Dokyun Kim
   photo: dokyun.jpg
-  info: 2022 - 2026
+  info: 2024 - 2026
   email: dkim4@olin.edu
   number_educ: 2
-  education1: Team Lead
+  education1: Team Lead, Robot Software
   education2: BSc Robotics, Class of 2026
 
 - name: Dexter Friis-Hecht
-  photo: bio-photo.jpg
-  info: 2022 - 2026
+  photo: dexter.jpg
+  info: 2024 - 2026
   email: dfrishecht@olin.edu
   number_educ: 2
-  education1: Team Lead
+  education1: Team Lead, Robot Software
   education2: BSc ECE, Class of 2026
 
+- name: Swasti Jain
+  photo: swasti.jpg
+  info: 2025 - 2026
+  email: swasti324@gmail.com
+  number_educ: 2
+  education1: Multi-Agent Path Planning, Robot Software
+  education2: BSc Robotics, Class of 2026
+
+- name: Heesung Han
+  photo: heesung.jpg
+  info: 2024 - Present
+  email: 1220heesung@gmail.com
+  number_educ: 2
+  education1: Soil Sampler Mechanical Engineer
+  education2: BSc MechE, Class of 2028
