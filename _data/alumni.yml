@@ -1,3 +1,21 @@
+- name: Dokyun Kim
+  photo: dokyun.jpg
+  info: Class of 2026
+  number_educ: 1
+  education1: BSc Robotics
+
+- name: Dexter Friis-Hecht
+  photo: dexter.jpg
+  info: Class of 2026
+  number_educ: 1
+  education1: BSc ECE
+
+- name: Swasti Jain
+  photo: swasti.jpg
+  info: Class of 2026
+  number_educ: 1
+  education1: BSc Robotics
+
 - name: Brooke Moss
   photo: brooke.jpg
   info: Class of 2025

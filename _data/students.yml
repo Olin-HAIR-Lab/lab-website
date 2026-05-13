@@ -1,27 +1,3 @@
-- name: Dokyun Kim
-  photo: dokyun.jpg
-  info: 2024 - 2026
-  email: dkim4@olin.edu
-  number_educ: 2
-  education1: Team Lead, Robot Software
-  education2: BSc Robotics, Class of 2026
-
-- name: Dexter Friis-Hecht
-  photo: dexter.jpg
-  info: 2024 - 2026
-  email: dfrishecht@olin.edu
-  number_educ: 2
-  education1: Team Lead, Robot Software
-  education2: BSc ECE, Class of 2026
-
-- name: Swasti Jain
-  photo: swasti.jpg
-  info: 2025 - 2026
-  email: swasti324@gmail.com
-  number_educ: 2
-  education1: Multi-Agent Path Planning, Robot Software
-  education2: BSc Robotics, Class of 2026
-
 - name: Heesung Han
   photo: heesung.jpg
   info: 2024 - Present
@@ -29,3 +5,52 @@
   number_educ: 2
   education1: Soil Sampler Mechanical Engineer
   education2: BSc MechE, Class of 2028
+
+- name: Mehmet Firat
+  photo: mehmet.jpg
+  info: 2024 - Present
+  email: mfirat@gmail.com
+  number_educ: 2
+  education1: Soil Sampler Mechanical Engineer
+  education2: BSc MechE, Class of 2028
+
+- name: Kilan Rougeot
+  photo: kilan.jpg
+  info: 2025 - Present
+  email: kilanrou@gmail.com
+  number_educ: 2
+  education1: Soil Sampler Mechanical Engineer
+  education2: BSc MechE, Class of 2028
+
+- name: Zaraius Bilimoria
+  photo: bio-photo.jpg
+  info: 2025 - Present
+  email: zbilimoria@olin.edu
+  number_educ: 2
+  education1: Integration Engineer
+  education2: BSc ECE, Class of 2028
+
+- name: Grant Rechtin
+  photo: bio-photo.jpg
+  info: 2025 - Present
+  email: grechtin@olin.edu
+  number_educ: 2
+  education1: Soil Sampler Mechanical Engineer
+  education2: BSc Robotics, Class of 2028
+
+- name: Ben Ricket
+  photo: bio-photo.jpg
+  info: 2025 - Present
+  email: bricket@olin.edu
+  number_educ: 2
+  education1: Integration Engineer
+  education2: BSc Robotics, Class of 2028
+
+- name: Pia Swarup
+  photo: bio-photo.jpg
+  info: 2025 - Present
+  email: pswarup@olin.edu
+  number_educ: 2
+  education1: Soil Sampler Mechanical Engineer
+  education2: BSc MechE, Class of 2029
+
