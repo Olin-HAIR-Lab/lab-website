@@ -56,28 +56,48 @@ The weeder arm must be able to accurately move the weeder claw into positions gi
 
 ## Plant Identification
 
+<iframe width="640" height="360" src="https://www.youtube.com/embed/P9HTVyT1tvQ?si=aBJ7uCZN7YKwWQrl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### Segmentation
+![]({{ site.url }}{{ site.baseurl }}/images/pjctpic/phoenixbot/plant-id-1.png){: style="width: 400px; float: left; margin: 5px 20px 5px 0px;"}
 To distinguish crops from weeds, we implemented a plant segmentation pipeline using a color-based approach combined with DBSCAN clustering. Initially, HSV thresholding isolates green pixels in the image. The image is then converted to binary, with green pixels as white and everything else as black. To reduce noise, morphological operations are applied: a 3x3 opening operation and a 10x10 closing operation. Finally, DBSCAN groups the white areas into clusters, with each cluster representing a different plant.
+<div style="clear: both;"></div>
 
 ### Classification
+![]({{ site.url }}{{ site.baseurl }}/images/pjctpic/phoenixbot/plant-id-2.png){: style="width: 400px; float: right; margin: 5px 0px 5px 20px;"}
 Once different plants are identified from the segmentation pipeline, each plant is cropped from the image and processed through a pre-trained neural network from Pl@ntNet (Garcin et al., 2021). We selected the ResNet18 model, which has 3000 different plant species it can identify. To minimize false negatives, a list of expected crops is defined. If the model's top five outputs with the highest confidence include a crop from this list, the plant is identified as that crop. Any plant not labeled as a crop is then classified as a weed.
+<div style="clear: both;"></div>
 
 ### Localization
+![]({{ site.url }}{{ site.baseurl }}/images/pjctpic/phoenixbot/plant-id-3.png){: style="width: 400px; float: left; margin: 5px 20px 5px 0px;"}
 Once all weeds are identified, their coordinates are sent to the weeder arm for removal. Pixel coordinates of the weed centers, calculated during segmentation, are converted to real-world coordinates using Intel's Depth Camera D435 module with its built-in depth sensor. This achieves ≤ 11 mm accuracy in both x and y directions.
+<div style="clear: both;"></div>
 
 ### Evaluation
+![]({{ site.url }}{{ site.baseurl }}/images/pjctpic/phoenixbot/plant-id-4.png){: style="width: 400px; float: right; margin: 5px 0px 5px 20px;"}
 To validate the segmentation pipeline, precision, recall, and mean IOU values of the predicted bounding boxes were calculated and compared to the ground truth. The segmentation pipeline showed an average precision of 0.69, recall of 0.70, and IoU of 0.68. For the classification pipeline, a confusion matrix for lettuce and weeds was calaulated. The result showed an accuracy of 0.88, precision of 0.91, and recall of 0.85.
+<div style="clear: both;"></div>
 
 ## Autonomous Navigation
 
+<iframe width="640" height="360" src="https://www.youtube.com/embed/_MDRunPJtV4?si=BI_tGLw1xx5rs1o8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### Crop Row Following
+![]({{ site.url }}{{ site.baseurl }}/images/pjctpic/phoenixbot/auto-nav-1.png){: style="width: 400px; float: left; margin: 5px 20px 5px 0px;"}
 The robot uses an Intel Realsense camera and OpenCV to maintain a straight path down a crop row. It isolates plants using HSV thresholding to mask non-green pixels, then crops the image to reduce error and computation time. Crop row lines are determined by analyzing green pixel ratios and smoothing peaks to identify rows. Assuming three crop rows, the system tries to minimize squared distances to the lines and calculates the vanishing point, which sets the robot's heading angle. A PID controller converts this angle into angular velocity, adjusting the linear velocity proportionally to ensure precise navigation.
+<div style="clear: both;"></div>
 
 ### Object Detection
+![]({{ site.url }}{{ site.baseurl }}/images/pjctpic/phoenixbot/auto-nav-2.png){: style="width: 400px; float: right; margin: 5px 0px 5px 20px;"}
 Since farmers will be working around the crop rows where the robot operates, the robot needs to be aware of its surroundings. We use Hokuyo's URG-04LX laser sensor, which allows coverage for the front and most of the sides. When the scanner detects an object, it enters one of three states: Danger, Warning, or Safe, depending on the proximity of the object. Based on the state, the robot will stop, slow down, or continue moving, respectively.
+<div style="clear: both;"></div>
 
 ### Lighthouse
+![]({{ site.url }}{{ site.baseurl }}/images/pjctpic/phoenixbot/auto-nav-3.gif){: style="width: 400px; float: left; margin: 5px 20px 5px 0px;"}
 To visually indicate the robot's "safety state," the object detector sends its state to the LED lighthouse, which then activates the corresponding colored light. Additionally, a buzzer is triggered when the robot is in either the Danger or Warning state, ensuring that nearby individuals can hear it even if they cannot see the lights.
+<div style="clear: both;"></div>
 
 ### Evaluation
+![]({{ site.url }}{{ site.baseurl }}/images/pjctpic/phoenixbot/auto-nav-4.png){: style="width: 400px; float: right; margin: 5px 0px 20px 20px;"}
 Using a 30 second video running at 30 frames per second and running each frame through our line detector at 320x240 resolution we got all three crop lines in 904/924 frames or 97.8% of the frames. We can also look at a cloud of calculated vanishing points to see how the estimated heading point changes over the 900 frames. We can see that with the exception of 11 outlier points almost 99% of our points match what seems to be the center of the crop row. Remember here that only the x value of the point matters as it is what is used to calculate the angle.
+<div style="clear: both;"></div>
