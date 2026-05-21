@@ -6,6 +6,8 @@ sitemap: true
 permalink: /phoenixbot/
 ---
 
+{% include head-custom.html %}
+
 # Phoenixbot
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/JOZpxB6JnlA?si=yLsPdz-Yy21n72vF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -17,20 +19,40 @@ Phoenixbot is an autonomous robot for precision weeding. The system combines col
 
 ## Mechanical Weeder
 
+<iframe width="640" height="360" src="https://www.youtube.com/embed/vYnQtPHCzmE?si=XD0NERGulzXpWBhE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/pjctpic/phoenixbot/weeder-arm-labeled.png" width="80%">
+
 ### Weeder Arm: Hardware
+
+![]({{ site.url }}{{ site.baseurl }}/images/pjctpic/phoenixbot/mech-weeder-1.png){: style="width: 400px; float: left; margin: 5px 20px 5px 0px;"}
 The mechanical weeder removes weeds identified by the plant identification system. To ensure both precision and efficiency, a delta arm was chosen due to its high-speed and precise operation. The delta manipulator comprises of a fixed base plate and a mobile end-effector platform connected by three link arms. Each arm consists of a bicep and a forearm, with biceps connected to the base via revolute joints. Three stepper motors spaced at 120° drive the biceps. The forearms are connected to the biceps and the end effector platform via spherical joints, ensuring parallel alignment with the base.
 
+<div style="clear: both;"></div>
+
 ### Weeder Arm: Software
+![]({{ site.url }}{{ site.baseurl }}/images/pjctpic/phoenixbot/mech-weeder-2.png){: style="width: 400px; float: right; margin: 5px 0px 5px 20px;"}
 The weeder arm can operate in two modes: autonomous and manual. In autonomous mode, the system receives the cartesian coordiantes of weeds, plans an appropriate path, and commands the arm to move accordingly. The arm then uses the claw to remove the weed before returning to home position. In manual mode, the system allows for joystick control, enabling the user to direct the arm's movements. Motor commands are sent to an Arduino, which executes them to control the motors. This system ensures efficient and precise weeding in both autonomous and manual operations.
 
+<div style="clear: both;"></div>
+
 ### Weeder Claw
+![]({{ site.url }}{{ site.baseurl }}/images/pjctpic/phoenixbot/mech-weeder-3.png){: style="width: 400px; float: left; margin: 5px 20px 5px 0px;"}
 The weeder claw, serving as the end effector of the weeder arm, combines PETG plastic components with sheet metal to form a robust structure. Actuated by a single servo motor, it efficiently picks weeds. Various designs for the tongs were tested to determine the optimal configuration for the final version.
 
+<div style="clear: both;"></div>
+
 ### Weeder Claw: Test Kit
+![]({{ site.url }}{{ site.baseurl }}/images/pjctpic/phoenixbot/mech-weeder-4.png){: style="width: 400px; float: right; margin: 5px 0px 5px 20px;"}
 To allow for parallel testing of the weeder claw and weeder arm, we developed an independent claw test kit that mimicked the robot's interface with the claw. It allowed single-hand vertical operation, allowing rapid testing of various tong and claw designs. Initially, a simple system with a button, continuous servo, and Arduino Nano was used to open and close the claw, but it didn't accurately simulate how it would function on the weeder arm. We added a current sensor to measure the servo's load, enabling detection of when the claw was fully opened or closed based on current draw.
 
+<div style="clear: both;"></div>
+
 ### Evaluation
+![]({{ site.url }}{{ site.baseurl }}/images/pjctpic/phoenixbot/mech-weeder-5.png){: style="width: 400px; float: left; margin: 5px 20px 5px 0px;"}
 The weeder arm must be able to accurately move the weeder claw into positions given by the plant ID pipeline to ensure it can remove weeds without damaging crops. Using a testing grid with known locations, the weeder arm was commanded to move the claw to specific positions in Cartesian space. After each motion, the final position was compared to the true position to assess accuracy. During twenty-five trials, the weeder arm was capable of positioning the claw with a mean error of 6.009 mm from the commanded position.
+
+<div style="clear: both;"></div>
 
 ## Plant Identification
 
