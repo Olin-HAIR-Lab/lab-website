@@ -9,7 +9,7 @@ permalink: /team/
 # Lab Members
 
 
-Jump to [staff](#staff), [current students](#students), [alumni](#alumni).
+Jump to [staff](#staff), [current students](#students), [alumni](#alumni), [partners](#partners)
 
 ## Staff
 {% assign number_printed = 0 %}
@@ -200,3 +200,31 @@ Jump to [staff](#staff), [current students](#students), [alumni](#alumni).
 </div>
 {% endif %}
 
+## Partners
+{% assign number_printed = 0 %}
+{% for partner in site.data.partners %}
+
+{% assign even_odd = number_printed | modulo: 2 %}
+
+{% if even_odd == 0 %}
+<div class="row">
+{% endif %}
+
+<div class="col-sm-6 clearfix">
+  <img src="{{ site.url }}{{ site.baseurl }}/images/teampic/{{ partner.photo }}" class="img-responsive" width="25%" style="float: left" />
+  <h4>{{ partner.name }}</h4>
+  <i>{{ partner.info }} 
+</div>
+
+{% assign number_printed = number_printed | plus: 1 %}
+
+{% if even_odd == 1 %}
+</div>
+{% endif %}
+
+{% endfor %}
+
+{% assign even_odd = number_printed | modulo: 2 %}
+{% if even_odd == 1 %}
+</div>
+{% endif %}
