@@ -7,8 +7,7 @@ permalink: /hydrofleet/
 ---
 
 # HydroFleet
-<!-- TODO: replace video link when it is public OK -->
-<iframe width="640" height="360" src="https://www.youtube.com/embed/JOZpxB6JnlA?si=yLsPdz-Yy21n72vF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/-dp3m6c1-Rw?si=l2PLrPWbVW-1X-_Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## System Overview
 HydroFleet is a multi-drone system that enables data-driven precision irrigation by generating high-resolution soil moisture mapping data, helping farms increase yields while reducing water and energy costs.
