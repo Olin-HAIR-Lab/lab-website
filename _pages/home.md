@@ -1,14 +1,15 @@
 ---
-title: "Human-centered AI and Robotics Lab"
+title: "Olin Field Robotics Lab"
 layout: homelay
-excerpt: "Human-centered AI and Robotics Lab"
+excerpt: "Olin Field Robotics Lab"
 sitemap: false
 permalink: /
 ---
 
-We are an all-undergraduate robotics research group at [Olin College of Engineering](https://www.olin.edu/)
+We are an all-undergraduate robotics research group at [Olin College of Engineering](https://www.olin.edu/). Formerly called Olin HAIR Lab.
 
-Our research focuses on developing robotic solutions for sustainable agriculture.
+Our research focuses on deploying robotics "in the wild" to tackle real-world challenges in sustainable agriculture.
+
 
 <!-- TODO: Add new images -->
 <div markdown="0" id="carousel" class="carousel slide" data-ride="carousel" data-interval="4000" data-pause="hover" >
@@ -56,7 +57,7 @@ Our research focuses on developing robotic solutions for sustainable agriculture
 
 
 <!-- TODO: Add hyperlinks -->
-The lab is led by Dr. Kenechukwu Mbanisi at [Olin College of Engineering](https://www.olin.edu/) and offers unique robotics research experiences for undergraduate students. Check out some of our current projects and reach out to us if you’re interested in getting involved.
+The lab is led by [Dr. Kenechukwu Mbanisi](https://www.olin.edu/bios/kenechukwu-mbanisi-0) at [Olin College of Engineering](https://www.olin.edu/) and offers unique robotics research experiences for undergraduate students. Check out some of our current projects and reach out to us if you’re interested in getting involved.
 
 
 <!-- <figure class="fifth">
